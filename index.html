@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mein Fitness Tracker</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#09090c;color:#f7f7fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:680px;margin:auto;padding:26px 16px 90px} h1{font-size:34px;margin:5px 0} .intro{color:#a7a7b2;margin-bottom:18px}
+.notice{background:#23232b;border-radius:15px;padding:13px 15px;margin:16px 0;color:#ddd;font-size:14px}
+.stats{display:flex;gap:10px;margin:16px 0 24px} .stat{flex:1;background:#17171d;border-radius:18px;padding:16px} .stat strong{display:block;font-size:25px} .stat span{color:#999;font-size:12px}
+.workout{background:#17171d;border:1px solid #2b2b35;border-radius:20px;margin:12px 0;overflow:hidden}
+summary{padding:18px;cursor:pointer;list-style:none} summary::-webkit-details-marker{display:none} summary span{font-weight:850;display:block} summary small{color:#999;display:block;margin-top:5px}
+.exercise-list{padding:0 14px 8px} .exercise{display:grid;grid-template-columns:27px 1fr;gap:10px;padding:12px 2px;border-top:1px solid #2a2a32}
+.exercise>input{width:23px;height:23px} label b{display:block} label small{display:block;color:#999;margin-top:3px}
+.fields{grid-column:2;display:flex;gap:7px} .fields input{width:88px;background:#0e0e12;color:#fff;border:1px solid #3a3a45;border-radius:9px;padding:8px}
+button{width:calc(100% - 28px);margin:5px 14px 16px;padding:12px;border:0;border-radius:12px;background:#fff;color:#111;font-weight:850}
+</style></head>
+<body><main>
+<h1>🔥 Mein Fitness Tracker</h1>
+<div class="intro">Alle 7 Workouts sind direkt im HTML eingebaut — nicht per JavaScript nachgeladen.</div>
+<div class="stats"><div class="stat"><strong id="weekly">0 / 3</strong><span>DIESE WOCHE</span></div><div class="stat"><strong id="total">0</strong><span>INSGESAMT</span></div></div>
+<div class="notice"><b>7 Workouts</b> · 45 Übungseinträge</div>
+<details class="workout" open>
+      <summary><span>FIT WITH COCO — ARMS + ABS</span><small>30 Min · Dumbbells + Matte · 16 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c0_0">
+          <label for="c0_0"><b>1. Bicep Curl + Overhead Press + Deadlift</b><small>Gewicht + Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_1">
+          <label for="c0_1"><b>2. Plank</b><small>Zeit</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_2">
+          <label for="c0_2"><b>3. I's & T's</b><small>kontrolliert</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_3">
+          <label for="c0_3"><b>4. Elevated Push-ups</b><small>Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_4">
+          <label for="c0_4"><b>5. Push-up Pulses</b><small>Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_5">
+          <label for="c0_5"><b>6. Burpees</b><small>Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_6">
+          <label for="c0_6"><b>7. Mountain Climbers</b><small>Zeit</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_7">
+          <label for="c0_7"><b>8. Side Lunge to Crunch</b><small>je Seite</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_8">
+          <label for="c0_8"><b>9. Hammer Curl + Triceps Extension</b><small>Gewicht + Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_9">
+          <label for="c0_9"><b>10. Single Arm Row + Leg Kickback</b><small>je Seite</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_10">
+          <label for="c0_10"><b>11. Chest Press + Leg Lowers</b><small>Gewicht + Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_11">
+          <label for="c0_11"><b>12. Dead Bugs</b><small>je Seite</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_12">
+          <label for="c0_12"><b>13. Squat Jumps</b><small>Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_13">
+          <label for="c0_13"><b>14. V-Ups</b><small>Wiederholungen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_14">
+          <label for="c0_14"><b>15. Hollow Hold</b><small>Zeit</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c0_15">
+          <label for="c0_15"><b>16. Flutter Kicks</b><small>Zeit</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details><details class="workout" >
+      <summary><span>GLUTES</span><small>Unterkörper · 6 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c1_0">
+          <label for="c1_0"><b>1. Dynamic Warm-up</b><small>5 Min</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c1_1">
+          <label for="c1_1"><b>2. Hip Thrust — Warm-up</b><small>1 × 10</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c1_2">
+          <label for="c1_2"><b>3. Hip Thrust</b><small>3 × 8</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c1_3">
+          <label for="c1_3"><b>4. Bulgarian Split Squat</b><small>3 × 8 je Seite</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c1_4">
+          <label for="c1_4"><b>5. Glute Hyperextension</b><small>3 × 8</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c1_5">
+          <label for="c1_5"><b>6. Cable Kickbacks</b><small>3 × 8 je Seite</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details><details class="workout" >
+      <summary><span>DUMBBELL ABS</span><small>2–3 Runden · 7 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c2_0">
+          <label for="c2_0"><b>1. Leg Raises</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c2_1">
+          <label for="c2_1"><b>2. Dead Bugs</b><small>10 je Bein</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c2_2">
+          <label for="c2_2"><b>3. Leg Hops</b><small>20</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c2_3">
+          <label for="c2_3"><b>4. In & Outs</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c2_4">
+          <label for="c2_4"><b>5. Toe Touches</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c2_5">
+          <label for="c2_5"><b>6. Tabletop Crunches</b><small>20</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c2_6">
+          <label for="c2_6"><b>7. Plank</b><small>bis saubere Form nachlässt</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details><details class="workout" >
+      <summary><span>ABS AT HOME</span><small>3 Sätze · 3 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c3_0">
+          <label for="c3_0"><b>1. Bicycle Crunches</b><small>8–10 je Bein</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c3_1">
+          <label for="c3_1"><b>2. Tabletop Crunches</b><small>8–10</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c3_2">
+          <label for="c3_2"><b>3. Dead Bugs</b><small>8–10 je Bein</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details><details class="workout" >
+      <summary><span>CORE ROUTINE</span><small>Core · 7 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c4_0">
+          <label for="c4_0"><b>1. Plank</b><small>1 Minute</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c4_1">
+          <label for="c4_1"><b>2. Leg Raises</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c4_2">
+          <label for="c4_2"><b>3. Dead Bugs</b><small>10 je Seite</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c4_3">
+          <label for="c4_3"><b>4. In and Out</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c4_4">
+          <label for="c4_4"><b>5. In and Out Pike</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c4_5">
+          <label for="c4_5"><b>6. Russian Twist</b><small>1 Minute</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c4_6">
+          <label for="c4_6"><b>7. 90° Leg Crunches</b><small>15</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details><details class="workout" >
+      <summary><span>AT HOME ABS + CORE</span><small>3 Runden · 5 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c5_0">
+          <label for="c5_0"><b>1. Leg Raises</b><small>bis Failure</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c5_1">
+          <label for="c5_1"><b>2. Toe Taps</b><small>bis Failure</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c5_2">
+          <label for="c5_2"><b>3. In and Out Table</b><small>bis Failure</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c5_3">
+          <label for="c5_3"><b>4. Plank Dumbbell Variation</b><small>Core</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div><div class="exercise">
+          <input type="checkbox" id="c5_4">
+          <label for="c5_4"><b>5. Dumbbell Around the World</b><small>30 Sekunden</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details><details class="workout" >
+      <summary><span>FIT WITH COCO — ABS + CARDIO</span><small>10 Min · ohne Equipment · 1 Übungen</small></summary>
+      <div class="exercise-list"><div class="exercise">
+          <input type="checkbox" id="c6_0">
+          <label for="c6_0"><b>1. 10-Minuten Follow-along</b><small>Video komplett mitmachen</small></label>
+          <div class="fields"><input inputmode="decimal" placeholder="kg"><input inputmode="numeric" placeholder="Wdh."></div>
+        </div></div>
+      <button onclick="completeWorkout(this)">Workout abschließen ✓</button>
+    </details>
+</main>
+<script>
+let completed=JSON.parse(localStorage.getItem("vk_completed")||"[]");
+function updateStats(){
+ const now=new Date(); const start=new Date(now); start.setHours(0,0,0,0); start.setDate(start.getDate()-((start.getDay()+6)%7));
+ document.getElementById("weekly").textContent=completed.filter(x=>x>=+start).length+" / 3";
+ document.getElementById("total").textContent=completed.length;
+}
+function completeWorkout(btn){completed.push(Date.now());localStorage.setItem("vk_completed",JSON.stringify(completed));updateStats();btn.textContent="Gespeichert ✓";}
+updateStats();
+</script></body></html>
